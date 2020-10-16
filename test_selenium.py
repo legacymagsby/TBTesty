@@ -3,8 +3,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import os
 
-self.username = os.getenv("TESTINGBOT_KEY")
-self.access_key = os.getenv("TESTINGBOT_SECRET")
+username = os.getenv("TESTINGBOT_KEY")
+access_key = os.getenv("TESTINGBOT_SECRET")
 
 
 caps = {
@@ -13,7 +13,7 @@ caps = {
 }
 
 driver = webdriver.Remote(
-    command_executor="http://%s:%s@hub.testingbot.com/wd/hub"%(self.username, self.access_key),
+    command_executor="http://%s:%s@hub.testingbot.com/wd/hub"%(username, access_key),
     desired_capabilities=caps)
 
 
